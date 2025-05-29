@@ -109,7 +109,20 @@ LoadEverything().then(() => {
             for (const [p, player] of Object.values(team.player).entries()) {
               let characters = _.get(player, "character");
               for (const c of Object.values(characters)) {
-                if (c.name) characterNames.push(c.name);
+                let res = [];
+                if (c.name) res.push(c.name);
+
+                if (c.variant){
+                  let variantName = c.variant.display_name;
+                  let variantIconPath = c.variant.icon_path;
+                  let str = "";
+                  if (variantIconPath) str += `<img src="${"../../" + variantIconPath}" class = "variant_icon"/>`
+                  if (variantName) str += `<span class = "variant_name">${variantName}</span>`
+                  res.push(str);
+                }
+
+                characterNames.push(res.join('<div class = "variant_intercal"></div>'))
+
               }
             }
           }
