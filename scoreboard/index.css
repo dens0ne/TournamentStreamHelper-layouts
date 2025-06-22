@@ -113,22 +113,6 @@ body {
   top: 60px;
 }
 
-.sf6 .player.container {
-  top: 10px;
-  height: 48px;
-  width: 480px;
-  transform: skewX(35deg);
-  border-radius: calc(var(--border-radius) / 2);
-  padding: 0px 16px;
-}
-
-.sf6 .p2.player.container > div:not(.score) {
-  transform: skewX(35deg);
-}
-
-.sf6 .p1.player.container > div:not(.score) {
-  transform: skewX(-35deg);
-}
 
 .roa2 .player.container {
   top: 0px;
@@ -181,9 +165,6 @@ body {
   left: 164px;
 }
 
-.sf6 .p1.container {
-  left: 248px;
-}
 
 .roa2 .p1.container {
   left: 0px;
@@ -231,10 +212,6 @@ body {
   right: 164px;
 }
 
-.sf6 .p2.container {
-  transform: skewX(-35deg);
-  right: 248px;
-}
 
 .roa2 .p2.container {
   right: 0px;
@@ -284,15 +261,6 @@ body {
   top: 137px
 }
 
-.sf6 .chips {
-  top: 106px;
-  height: 32px;
-}
-
-.sf6.offline .chips {
-  width: 450px;
-}
-
 .roa2 .chips {
   top: 106px;
   height: 32px;
@@ -300,20 +268,6 @@ body {
 
 .roa2.offline .chips {
   width: 720px;
-}
-
-.sf6.online .chips {
-  width: 270px;
-  background: var(--bg-color);
-  border-radius: calc(var(--border-radius) / 4);
-}
-
-.sf6.online .p1.chips {
-  transform: skewX(35deg);
-}
-
-.sf6.online .p2.chips {
-  transform: skewX(-35deg);
 }
 
 .mk1 .chips {
@@ -353,20 +307,6 @@ body {
 
 .nasb2 .p1.chips {
   left: 350px;
-}
-
-.sf6 .chip {
-  height: 32px;
-}
-
-.sf6.online .p1.chips {
-  left: 200px;
-  justify-content: left;
-}
-
-.sf6.offline .p1.chips {
-  left: 8px;
-  justify-content: left;
 }
 
 .roa2.offline .p1.chips {
@@ -411,12 +351,6 @@ body {
   right: 350px;
 }
 
-.sf6.online .p2.chips {
-  left: unset;
-  right: 200px;
-  justify-content: right;
-}
-
 .mk1.online .p2.chips {
   left: unset;
   right: 25px;
@@ -431,12 +365,6 @@ body {
   justify-content: right;
 }
 
-.sf6.offline .p2.chips {
-  left: unset;
-  right: 8px;
-  justify-content: right;
-}
-
 .roa2.offline .p2.chips {
   left: unset;
   right: 8px;
@@ -448,24 +376,6 @@ body {
   right: 142px;
   justify-content: right;
   flex-direction: row;
-}
-
-.sf6.online .seed {
-  position: absolute;
-  top: 106px;
-}
-
-.sf6.online .p1 .seed {
-  left: -16px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.sf6.online .p2 .seed {
-  left: unset;
-  right: -16px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .mk1.online .seed {
@@ -499,33 +409,6 @@ body {
   min-width: unset;
   padding-left: 8px;
   padding-right: 8px;
-}
-
-.sf6 .chip .text:not(.text_empty) {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.sf6 .chip .text {
-  background: none;
-  position: relative;
-}
-
-.sf6.offline .chip .text:not(.text_empty)::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100% + 4px);
-  height: 100%;
-  background: var(--bg-color);
-  border-radius: calc(var(--border-radius) / 4);
-  transform: skewX(35deg);
-  content: " ";
-  z-index: -999;
-}
-
-.sf6.offline .p2 .chip .text:not(.text_empty)::before {
-  transform: skewX(-35deg);
 }
 
 .flagcountry, .flagstate {
@@ -602,11 +485,6 @@ body {
   gap: 8px;
 }
 
-.sf6 .chip .text:not(.text_empty) {
-  font-size: 20px;
-  height: 100%;
-}
-
 .roa2 .chip .text:not(.text_empty) {
   font-size: 20px;
   height: 100%;
@@ -617,39 +495,6 @@ body {
   padding-right: 8px;
 }
 
-.sf6.online .seed.chip .text:not(.text_empty) {
-  margin: 0;
-  border-radius: 0;
-  width: 140px;
-}
-
-.sf6.online .p1 .chip {
-  transform: skewX(-35deg);
-}
-
-.sf6.online .p2 .chip {
-  transform: skewX(35deg);
-}
-
-.sf6.online .p1 .seed.chip {
-  background: var(--bg-color);
-  border-radius: calc(var(--border-radius) / 4);
-  transform: skewX(35deg);
-}
-
-.sf6.online .p2 .seed.chip {
-  background: var(--bg-color);
-  border-radius: calc(var(--border-radius) / 4);
-  transform: skewX(-35deg);
-}
-
-.sf6.online .p1 .seed.chip .text {
-  transform: skewX(-35deg);
-}
-
-.sf6.online .p2 .seed.chip .text {
-  transform: skewX(35deg);
-}
 
 .mk1 .chip .text:not(.text_empty) {
   font-size: 20px;
@@ -690,10 +535,6 @@ body {
   width: 60%;
 }
 
-.sf6 .name_twitter .name {
-  width: 100%;
-  font-size: 30px;
-}
 
 .tekken8 .name_twitter .name {
   font-size: 28px;
@@ -731,13 +572,6 @@ body {
   transform: skewX(45deg);
 }
 
-.sf6 .p1 .name_twitter, .sf6 .p1 .score > .text {
-  transform: skewX(-35deg);
-}
-
-.sf6 .p2 .name_twitter, .sf6 .p2 .score > .text {
-  transform: skewX(35deg);
-}
 
 .name_twitter {
   max-width: 100%;
@@ -911,11 +745,6 @@ body {
   top: 970px;
 }
 
-.sf6 .logo {
-  width: 80px;
-  height: 80px;
-  top: 924px;
-}
 
 .roa2 .logo {
   width: 80px;
@@ -1022,10 +851,6 @@ body {
   font-size: 24px;
 }
 
-.sf6 .tournament_name {
-  height: unset;
-  font-size: 24px;
-}
 
 .fgc .info.container.top {
   top: 8px;
@@ -1080,17 +905,6 @@ body {
   height: 48px;
 }
 
-.sf6 .info.container.top {
-  background: unset;
-  overflow: visible;
-  justify-content: center;
-  padding: 0 42px;
-  width: 470px;
-  top: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  height: 28px;
-}
 
 
 .roa2 .info.container.top {
@@ -1156,10 +970,6 @@ body {
   width: 100%;
 }
 
-.sf6 .phase {
-  font-size: 20px;
-  letter-spacing: 2px;
-}
 
 .roa2 .phase {
   font-size: 20px;
@@ -1176,10 +986,6 @@ body {
   width: 100%;
 }
 
-.sf6 .match {
-  font-size: 26px;
-  letter-spacing: 2px;
-}
 
 .fgc .info.container.bottom {
   top: unset;
@@ -1195,19 +1001,6 @@ body {
   top: 63px;
 }
 
-.sf6 .info.container.bottom {
-  border-radius: calc(var(--border-radius) / 2);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  top: unset;
-  bottom: 0;
-  width: 400px;
-  height: 64px;
-  background: unset;
-  overflow: visible;
-  padding: 0 42px;
-  justify-content: center;
-}
 
 .bblue .info.container.top {
   border-radius: var(--border-radius);
@@ -1366,10 +1159,6 @@ body {
   background-size: cover;
 }
 
-.sf6 .icon div:not(.text) {
-  height: 34px;
-  width: 34px;
-}
 
 .roa2 .icon div:not(.text) {
   height: 70px;
@@ -1483,22 +1272,6 @@ body {
   height: 80px;
 }
 
-.sf6 .sponsor_icon {
-  position: absolute;
-  right: 90px;
-  z-index: -999;
-  opacity: 0.6;
-}
-
-.sf6 .p2 .sponsor_icon {
-  right: unset;
-  left: 90px;
-}
-
-.sf6 .sponsor_icon > div > div {
-  width: 100px;
-  height: 100px;
-}
 
 .thin .sponsor_icon {
   position: absolute;
@@ -1601,9 +1374,6 @@ body {
   width: 48px;
 }
 
-.sf6 .score {
-  font-size: 34px;
-}
 
 .roa2 .score {
   height: 110px;
@@ -1632,10 +1402,6 @@ body {
   margin-left: 16px;
 }
 
-.sf6 .p1 .score {
-  margin-right: -16px;
-  margin-left: 16px;
-}
 
 .sponsor {
   margin-right: 6px;
@@ -1662,10 +1428,6 @@ body {
   margin-right: 16px;
 }
 
-.sf6 .p2 .score {
-  margin-left: -16px;
-  margin-right: 16px;
-}
 
 .p2 .sponsor {
   color: var(--p2-sponsor-color);
@@ -1717,9 +1479,6 @@ body {
   left: 0;
 }
 
-.sf6 .top_bg_1 {
-  transform: skewX(35deg);
-}
 
 .top_bg_2 {
   transform: skewX(-45deg);
@@ -1727,9 +1486,6 @@ body {
   right: 0;
 }
 
-.sf6 .top_bg_2 {
-  transform: skewX(-35deg);
-}
 
 .bottom_bg_1 {
   transform: skewX(45deg);
@@ -1737,16 +1493,9 @@ body {
   right: 0;
 }
 
-.sf6 .bottom_bg_1 {
-  transform: skewX(35deg);
-}
 
 .bottom_bg_2 {
   transform: skewX(-45deg);
   transform-origin: bottom left;
   left: 0;
-}
-
-.sf6 .bottom_bg_2 {
-  transform: skewX(-35deg);
 }
