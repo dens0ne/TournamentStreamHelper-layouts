@@ -4,14 +4,17 @@
     <script src="../include/globals.js"></script>
     <link rel="stylesheet" href="../main.css" />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="../../out/css/scoreboard.css" />
   </head>
-  <body class="fgc thin dbfz">
+  <body class="override offline">
     <div class="logo fade"></div>
 
     <div class="anim_container_outer">
       <div class="anim_container_inner">
-        <div class="info bottom container fade_up">
-          <div class="tournament_name"></div>
+        <div class="info top container fade_down">
+          <div class="top_bg_1"></div>
+          <div class="top_bg_2"></div>
+          <div class="match"></div>
         </div>
 
         <div class="p1 player container fade_right">
@@ -22,10 +25,6 @@
           <div class="sponsor_icon"></div>
           <div class="name_twitter">
             <div class="name"></div>
-            <div class="extra">
-              <div class="pronoun"></div>
-              <div class="twitter"></div>
-            </div>
           </div>
           <div class="score"></div>
         </div>
@@ -37,17 +36,27 @@
           <div class="sponsor_icon"></div>
           <div class="name_twitter">
             <div class="name"></div>
-            <div class="extra">
-              <div class="pronoun"></div>
-              <div class="twitter"></div>
-            </div>
           </div>
           <div class="score"></div>
         </div>
 
-        <div class="info top container fade_up">
+        <div class="info bottom container fade_up">
+          <div class="bottom_bg_1"></div>
+          <div class="bottom_bg_2"></div>
+          <div class="tournament_name"></div>
           <div class="phase"></div>
-          <div class="match"></div>
+        </div>
+
+        <div class="p1 chips">
+          <div class="seed chip fade_stagger_reverse"></div>
+          <div class="twitter chip fade_stagger_reverse"></div>
+          <div class="pronoun chip fade_stagger_reverse"></div>
+        </div>
+
+        <div class="p2 chips">
+          <div class="seed chip fade_stagger_reverse"></div>
+          <div class="twitter chip fade_stagger_reverse"></div>
+          <div class="pronoun chip fade_stagger_reverse"></div>
         </div>
       </div>
     </div>
