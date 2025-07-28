@@ -250,7 +250,7 @@ async function LoadSettings() {
     console.log(e);
   }
 
-  tsh_settings = _.defaultsDeep(file_settings, global_settings);
+  tsh_settings = _.defaultsDeep(window.settings, file_settings, global_settings);
   console.log(tsh_settings);
 }
 
