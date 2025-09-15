@@ -170,7 +170,7 @@ LoadEverything().then(() => {
       let isARealTeam = names.length > 1;
       if(!isARealTeam) {
         // We are going to assume that if there is one player with a name in the team, this is the player we want.
-        // If there are two or none, we're taking the first one.
+        // If player 1 has no name, but player 2 has one. We take player 2. Default on player 1 otherwise.
         // There is no proper implentation of a mixed mode in TSH as of making this.
         let playerToUse = team.player["1"];
 
