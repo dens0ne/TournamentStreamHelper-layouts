@@ -108,6 +108,19 @@ LoadEverything().then(() => {
           );
 
           SetInnerHtml(
+            $(`.p${t + 1} .controller`),
+            player.controller
+              ? `
+              <div>
+                  <div class='controller_wrapper'>
+                  <img src='../../${player.controller.icon_path}' width="25" height="25">
+                  <span class = "controller_name">${player.controller.name}</span>
+                  </div>
+              </div>`
+              : ""
+          );
+
+          SetInnerHtml(
             $(`.p${t + 1} .flagstate`),
             player.state.asset
               ? `
