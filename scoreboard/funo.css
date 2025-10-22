@@ -1,0 +1,91 @@
+.p1.container {
+    transform: translate(50px, -15px);
+    background: #000000c2;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+}
+
+.p2.container {
+    transform: translate(-50px, -15px);
+    background: #000000c2;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+}
+
+.fgc.thin.gbvsr .player.container {
+    width: 550px;
+}
+
+.p1 .score {
+    background: #000000c2;
+    color: white;
+    /* -webkit-text-stroke: 1px #000; */
+    width: 100px !important;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
+}
+
+.p2 .score {
+    background: #000000c2; 
+    color: white;
+    /* -webkit-text-stroke: 1px #000; */
+    width: 100px !important;
+    clip-path: polygon(5% 0, 100% 0, 60% 100%, 0 100%);
+}
+
+.thin .p1 .score {
+    margin-right: -8px;
+    margin-left: -10px;
+}
+
+.thin .p2 .score {
+    margin-left: -8px;
+    margin-right: -10px;
+}
+
+.fgc .name_twitter .name {
+    width: 100%;
+}
+
+.p1 .losers, .p2 .losers {
+    background: #BE4894;
+    /* -webkit-text-stroke: 1px #000; */
+}
+
+.fondo {
+    max-width: 100px;
+}
+
+.p1 .fondo {
+    left: 40px;
+    opacity: .2;
+}
+
+.p2 .fondo {
+    right: 40px;
+    opacity: .2;
+}
+
+.fgc .p1 .name_twitter .name .text {
+    justify-content: flex-end;
+}
+
+.fgc .p2 .name_twitter .name .text {
+    justify-content: flex-start;
+}
+
+.sponsor {
+    color: #505050 !important;
+}
+
+.flagcountry .text div {
+    font-size: xx-large;
+}
+
+.fgc.thin .score {
+    font-size: 40px;
+}
+
+.fgc.thin.gbvsr .info.container.top {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    width: 350px;
+    height: 50px;
+    bottom: 40px;
+}

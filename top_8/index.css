@@ -375,3 +375,7 @@ body {
   margin-bottom: -8px;
   height: 100px;
 }
+
+.container {
+  background-color: #00000000;
+}

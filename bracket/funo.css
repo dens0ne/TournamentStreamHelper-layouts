@@ -1,0 +1,24 @@
+.title .container {
+    background-color: #00000000;
+}
+
+:root {
+    --border-radius: 0;
+    --text-color: white;
+    --bg-color: #18181b;
+    --p1-score-bg-color: #18181b;
+    --p2-score-bg-color: #ffeb18;
+    --p1-sponsor-color: #505050;
+    --p2-sponsor-color: #505050;
+    --p1-score-color: white;
+    --p2-score-color: black;
+    --box-solid-color: #f4428d;
+  }
+
+.lines > .line {
+    stroke: #FCE7CC;
+}
+
+.character_container {
+    opacity: .3;
+}

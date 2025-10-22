@@ -173,13 +173,13 @@ LoadEverything().then(() => {
                 ${await Transcript(player.name)}
                 ${team.losers ? "<span class='losers'>L</span>" : ""}
               `
-            );
+            ); // add ${player.team ? "/" : ""} to line 172 for / between player sponsor and name
 
             SetInnerHtml(
               $(`.p${t + 1} .flagcountry`),
               player.country.asset
                 ? `
-                  <div class='flag' style='background-image: url(../../${player.country.asset.toLowerCase()})'></div>
+                  <!-- <div class='flag' style='background-image: url(../../${player.country.asset.toLowerCase()})'></div> !-->
                   <div>${player.country.code}</div>
                 `
                 : ""

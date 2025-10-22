@@ -1,20 +1,23 @@
 {
   "top_1": {
     "default": {
-      "use_dividers": false,
+      "asset_key": "website",
+      "use_dividers": true,
       "custom_center": [0.5, 0.4]
     }
   },
   "top_4": {
     "default": {
-      "use_dividers": false,
+      "asset_key": "full",
+      "use_dividers": true,
       "custom_center": [0.5, 0.4],
       "custom_zoom": 1
     }
   },
   "top_8": {
     "default": {
-      "use_dividers": false,
+      "asset_key": "full",
+      "use_dividers": true,
       "custom_center": [0.5, 0.4],
       "custom_zoom": 1
     }

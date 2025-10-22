@@ -184,15 +184,14 @@ LoadEverything().then(() => {
             Object.values(slot.playerId).forEach((playerId, p) => {
               html += `
                 <div class="p_${playerId} slot_p_${p} player container">
-                  <div class="icon avatar"></div>
-                  <div class="icon online_avatar"></div>
+                  <!-- <div class="icon avatar"></div> -->
+                  <!-- <div class="icon online_avatar"></div> -->
                   <div class="name_twitter">
                   <div class="name"></div>
                   </div>
                   <div class="sponsor_icon"></div>
                   <div class="flags">
                     <div class="flagcountry"></div>
-                    <div class="flagstate"></div>
                   </div>
                   <div class="character_container"></div>
                   <div class="score">0</div>
@@ -222,15 +221,14 @@ LoadEverything().then(() => {
               Object.values(slot.playerId).forEach((playerId, p) => {
                 html += `
                   <div class="slot_p_${p} player container">
-                    <div class="icon avatar"></div>
-                    <div class="icon online_avatar"></div>
+                    <!-- <div class="icon avatar"></div> -->
+                    <!-- <div class="icon online_avatar"></div> -->
                     <div class="name_twitter">
                     <div class="name"></div>
                     </div>
                     <div class="sponsor_icon"></div>
                     <div class="flags">
                       <div class="flagcountry"></div>
-                      <div class="flagstate"></div>
                     </div>
                     <div class="character_container"></div>
                     <div class="score">0</div>
@@ -326,7 +324,7 @@ LoadEverything().then(() => {
                     .map((point) => point.join(" "))
                     .map((point) => "L" + point)
                     .join(" ")}"
-                  stroke="var(--lines)" fill="none" stroke-width="5" />`;
+                  stroke="black" fill="none" stroke-width="5" />`;
                 }
 
                 // Lines for progressions in
@@ -666,7 +664,8 @@ LoadEverything().then(() => {
                     names.push(await Transcript(player.name));
                   }
                 }
-                teamName = names.join(" / ");
+                // Custom code.
+                teamName = names.length > 2 ? names.join(" / ") : names[0];
               }
 
               SetInnerHtml(

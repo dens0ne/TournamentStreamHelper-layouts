@@ -1,19 +1,31 @@
 {
   "assets": {
-    "default": {},
-    "roa2": {
-      "asset_key": "costume",
-      "custom_zoom": 1.2,
-      "custom_center": [
-        0.65,
-        0.35
-      ]
+    "default": {
+      "asset_key": "full",
+      "custom_center": [0.55, 0.4]
     },
     "sf6": {
-      "asset_key": "versus_screen",
+      "asset_key": "kangyaku",
       "custom_zoom": 1.2,
       "custom_center": [0.55, 0.4]
+    },
+    "ggst": {
+      "asset_key": "chibi",
+      "custom_zoom": 1.2,
+      "custom_center": [0.55, 0.4]
+    },
+    "tekken8": {
+      "asset_key": "full",
+      "custom_zoom": 1.2,
+      "custom_center": [0.5, 0.2]
+    },
+    "usfiv": {
+      "asset_key": "full",
+      "custom_zoom": 1.2,
+      "custom_center": [0.5, 0.8]
+    },
+    "fs": {
+      "asset_key": "icon"
     }
-  },
-  "force_variant_last": false
+  }
 }

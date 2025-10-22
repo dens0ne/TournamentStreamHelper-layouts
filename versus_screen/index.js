@@ -1,19 +1,3 @@
-function makeVariantHTML(variant){
-  let variantName = variant.display_name;
-  let variantIconPath = variant.icon_path;
-  let str = "";
-  if (variantIconPath) {
-    let y_ = 32;
-    let {x, y} = variant.image_size ?? {x: 32, y: 32};
-    x = x * (y_ / y);
-
-    str += `<img src="${"../../" + variantIconPath}" class = "variant_icon" width="${x}" height="${y_}"/>`
-  } 
-  if (variantName) str += `<span class = "variant_name">${variantName}</span>`;
-
-  return str;
-}
-
 LoadEverything().then(() => {
   let startingAnimation = gsap
     .timeline({ paused: true })
@@ -33,7 +17,7 @@ LoadEverything().then(() => {
       { duration: 0.8, opacity: "0", ease: "power2.inOut" },
       0
     )
-    .from([".vs"], { duration: 0.4, opacity: "0", scale: 4, ease: "out" }, 0.5)
+    .from([".versus"], { duration: .5, opacity: "0", scale: 4, ease: "bounce", y: -500 }, .5)
     .from([".p1.container"], { duration: 1, x: "-100px", ease: "out" }, 0)
     .from([".p2.container"], { duration: 1, x: "100px", ease: "out" }, 0);
 
@@ -59,7 +43,7 @@ LoadEverything().then(() => {
                   <div>
                     <span class='sponsor'>
                         ${player.team ? player.team : ""}
-                    </span>
+                    </span>${player.team ? "/" : ""}
                     ${await Transcript(player.name)}
                   </div>
               </span>
@@ -107,14 +91,15 @@ LoadEverything().then(() => {
               : ""
           );
 
+          // Custom code.
+          console.log('player!!!');
+          console.log(player);
           SetInnerHtml(
             $(`.p${t + 1} .controller`),
             player.controller
               ? `
               <div>
-                  <div class='controller_wrapper'>
-                  <img src='../../${player.controller.icon_path}' width="25" height="25">
-                  <span class = "controller_name">${player.controller.name}</span>
+                  <div class='controller' style="background-image: url('../../${player.controller.simple_icon_path}');">
                   </div>
               </div>`
               : ""
@@ -133,42 +118,20 @@ LoadEverything().then(() => {
           );
 
           let characterNames = [];
-          let single_variant = null;
 
           if(!window.ONLINE_AVATAR && !window.PLAYER_AVATAR){
-            let characters = _.get(player, "character");
-            
-            let characterValues = Object.values(characters)
-            if (tsh_settings.force_variant_last && characterValues.length > 1){
-              for (const c of characterValues){
-                if (c.variant){
-                  if (single_variant){
-                    single_variant == false;
-                  } else if (single_variant === null) { //fist variant
-                    single_variant = c.variant;
-                  }
-                }
+            for (const [p, player] of Object.values(team.player).entries()) {
+              let characters = _.get(player, "character");
+              for (const c of Object.values(characters)) {
+                if (c.name) characterNames.push(c.name);
               }
             }
-
-            for (const c of characterValues) {
-
-              let res = [];
-              if (c.name) res.push(c.name);
-
-              if (c.variant && !single_variant){ 
-                res.push(makeVariantHTML(c.variant));
-              }
-
-              characterNames.push(res.join('<div class = "variant_intercal"></div>'))
-            }
-
           }
 
           SetInnerHtml(
             $(`.p${t + 1} .character_name`),
             `
-                ${characterNames.filter(elt=>!!elt).join(" / ") + (single_variant ? makeVariantHTML(single_variant) : "")}
+                ${characterNames.join(" / ")}
             `
           );
 
@@ -316,27 +279,7 @@ LoadEverything().then(() => {
           for (const [p, player] of Object.values(team.player).entries()) {
             let characters = _.get(player, "character");
             for (const c of Object.values(characters)) {
-
-              let res = [];
-                if (c.name) res.push(c.name);
-
-                if (c.variant){
-                  let variantName = c.variant.display_name;
-                  let variantIconPath = c.variant.icon_path;
-                  let str = "";
-                  if (variantIconPath) {
-                    let y_ = 32;
-                    let {x, y} = c.variant.image_size ?? {x: 32, y: 32};
-                    x = x * (y_ / y);
-                    console.log("X ; Y", x, y);
-
-                    str += `<img src="${"../../" + variantIconPath}" class = "variant_icon" width="${x}" height="${y_}"/>`
-                  } 
-                  if (variantName) str += `<span class = "variant_name">${variantName}</span>`
-                  res.push(str);
-                }
-
-                characterNames.push(res.join('<div class = "variant_intercal"></div>'))
+              if (c.name) characterNames.push(c.name);
             }
           }
         }
@@ -344,7 +287,7 @@ LoadEverything().then(() => {
         SetInnerHtml(
           $(`.p${t + 1} .character_name`),
           `
-              ${characterNames.filter(elt=>!!elt).join(" / ")}
+              ${characterNames.join(" / ")}
           `
         );
 

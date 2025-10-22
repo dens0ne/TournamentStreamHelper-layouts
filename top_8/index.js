@@ -38,6 +38,7 @@ LoadEverything().then(() => {
                   <div class="twitter"></div>
                 </div>
                 <div class="sponsor_icon"></div>
+                <div class="controller"></div>
               </div>
               <div class="flags">
                 <div class="flagcountry"></div>
@@ -116,6 +117,19 @@ LoadEverything().then(() => {
                   : "",
                 undefined,
                 0
+              );
+
+              // Custom code.
+              console.log('player!!!');
+              console.log(player);
+              SetInnerHtml(
+                $(`.slot${parseInt(t)} .p${parseInt(p)}.container .controller`),
+                player.controller
+                  ? `
+                  <div>
+                      <div class='controller' style="background-image: url('../../${player.controller.simple_icon_path}');"></div>
+                  </div>`
+                  : ""
               );
   
               let load_settings_path = "top_1";

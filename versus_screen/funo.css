@@ -133,6 +133,10 @@ body {
   align-items: flex-end;
 }
 
+.p2 .name_row {
+  justify-content: end;
+}
+
 .info_grid {
   display: flex;
   justify-items: center;
@@ -292,12 +296,12 @@ body {
 
 .p1 .losers_badge {
   background-color: var(--p1-sponsor-color);
-  right: 16px;
+  right: 10px;
 }
 
 .p2 .losers_badge {
   background-color: var(--p2-sponsor-color);
-  left: 16px;
+  left: 10px;
 }
 
 .container.top {
@@ -377,6 +381,7 @@ body {
 }
 
 .flag {
+  background: none !important;
   position: relative;
   display: inline-block;
   background-size: cover;
@@ -386,7 +391,7 @@ body {
   height: 36px;
   display: flex;
   justify-content: center;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   margin-bottom: 16px;
   border-radius: 8px;
 }
@@ -394,16 +399,33 @@ body {
 .flagname {
   position: absolute;
   text-align: center;
-  font-size: 16px;
-  padding: 1px 8px;
-  border-radius: 2px;
+  font-size: 50px;
+  padding: 1px 20px;
+  /* border-radius: 2px; */
   background-color: #000000ff;
-  top: 28px;
+  top: -4px;
   left: 50%;
   transform: translateX(-50%);
-  border: 2px white solid;
-  border-radius: 10px;
+  /* border: 2px white solid; */
+  /* border-radius: 10px; */
   color: white;
+}
+
+.controller {
+  /* position: absolute; */
+  opacity: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border: 0 !important;
+}
+
+.p1 .controller {
+  left: 7;
 }
 
 .score {
@@ -427,7 +449,7 @@ body {
   overflow: visible;
   left: 0;
   width: 540px;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
   height: 720px;
   z-index: -1;
@@ -447,7 +469,7 @@ body {
 
 .p1.character .tsh_character {
   width: 100%;
-  background: var(--p1-score-bg-color);
+  /* background: var(--p1-score-bg-color); */
 }
 
 .tsh_character {
@@ -465,7 +487,7 @@ body {
   overflow: visible;
   right: 0px;
   width: 540px;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
   height: 720px;
   display: flex;
@@ -475,7 +497,7 @@ body {
 .p2.character > .tsh_character {
   width: 100%;
   transform: scaleX(-1);
-  background: var(--p2-score-bg-color);
+  /* background: var(--p2-score-bg-color); */
 }
 
 .character .text {
@@ -504,7 +526,7 @@ body {
   filter: drop-shadow(16px 12px 0px rgba(0, 0, 0, 0.8));
 }
 
-.vs {
+.versus {
   font-size: 200px;
   position: absolute;
   color: white;
@@ -515,7 +537,11 @@ body {
   z-index: 999;
 }
 
-.character_name {
+.versus > img {
+  width: 450px;
+}
+
+.flagscontainer {
   position: fixed;
   max-width: 480px;
   min-width: 0;
@@ -524,21 +550,27 @@ body {
   text-transform: uppercase;
   left: 48px;
   box-sizing: border-box;
-  background: var(--bg-color);
+  /* background: var(--bg-color); */
   border-radius: calc(var(--border-radius)/2);
   padding: 4px 16px;
 }
 
-.p2 .character_name {
-  right: 48px;
-  left: unset;
+.p1 .flagscontainer {
+  left: -1.2em;
+  top: -185px;
 }
 
-.character_name .text {
+.p2 .flagscontainer {
+  right: -1.5em;
+  left: unset;
+  top: -185px;
+}
+
+.flagscontainer .text {
   justify-content: flex-start;
 }
 
-.character_name.text_empty {
+.flagscontainer.text_empty {
   padding: 0 !important;
 }
 
@@ -559,4 +591,75 @@ body {
 
 .p2 .sponsor_logo {
   right: 32px;
+}
+
+/* Custom */
+
+.p1.container, .p2.container {
+  background-color: #000;
+  bottom: 60px;
+  border-radius: 0;
+  width: 525px;
+}
+
+.character_name, .container {
+  background-color: #00000000;
+}
+
+/* Main theme -- Dark Gradient */
+/* :root {
+  --p1-sponsor-color: #F1DA00;
+  --p2-sponsor-color: #F1DA00;
+
+} */
+
+.p1 .losers_badge, .p2 .losers_badge {
+  background-color: #000;
+  color: #FF51D1;
+}
+
+.p2 .losers_badge {
+  left: 1em;
+}
+
+.p1 .losers_badge {
+  right: 1em ;
+}
+
+.p1.player.container {
+  transform: translate(36%, 0px);
+  height: 180px;
+}
+.p2.player.container {
+  transform: translate(-35%, 0%);
+  height: 180px;
+}
+.p1.character {
+  transform: translate(10em, -50%);
+  /* width: 810px; */
+  max-height: 680px;
+}
+.p2.character {
+  transform: translate(-10em, -50%);
+  /* width: 810px; */
+  max-height: 680px;
+}
+
+.p1.character > .tsh_character, .p2.character > .tsh_character {
+  border-radius: 0;
+  /* top: -2px; */
+  border: #FCE7CC solid;
+}
+
+.p1.player.container > .character_name, .p2.player.container > .character_name {
+  border-radius: 0;
+}
+
+.versus {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }

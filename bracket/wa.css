@@ -1,0 +1,22 @@
+.title .container {
+    border-radius: 0;
+    background-color: #FF51D1
+}
+
+:root {
+    --font: "SansPoster";
+    --border-radius: 0;
+    --text-color: white;
+    --bg-color: #18181b;
+    --p1-score-bg-color: #ff51d1;
+    --p2-score-bg-color: #ffeb18;
+    --p1-sponsor-color: #ffeb18;
+    --p2-sponsor-color: #ffeb18;
+    --p1-score-color: rgb(252, 218, 218);
+    --p2-score-color: black;
+    --box-solid-color: #f4428d;
+  }
+
+.lines > .line {
+    stroke: #FF51D1;
+}

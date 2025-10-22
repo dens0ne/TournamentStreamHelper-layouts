@@ -292,12 +292,12 @@ body {
 
 .p1 .losers_badge {
   background-color: var(--p1-sponsor-color);
-  right: 16px;
+  right: 10px;
 }
 
 .p2 .losers_badge {
   background-color: var(--p2-sponsor-color);
-  left: 16px;
+  left: 10px;
 }
 
 .container.top {
@@ -447,7 +447,7 @@ body {
 
 .p1.character .tsh_character {
   width: 100%;
-  background: var(--p1-score-bg-color);
+  /* background: var(--p1-score-bg-color); */
 }
 
 .tsh_character {
@@ -475,7 +475,7 @@ body {
 .p2.character > .tsh_character {
   width: 100%;
   transform: scaleX(-1);
-  background: var(--p2-score-bg-color);
+  /* background: var(--p2-score-bg-color); */
 }
 
 .character .text {
@@ -559,4 +559,69 @@ body {
 
 .p2 .sponsor_logo {
   right: 32px;
+}
+
+/* Custom */
+
+.p1.container, .p2.container {
+  background-color: #FF51D1;
+  bottom: 60px;
+  border-radius: 0;
+}
+
+.character_name, .container {
+  background-color: #FF51D1;
+}
+
+/* Main theme -- Dark Gradient */
+/* :root {
+  --p1-sponsor-color: #F1DA00;
+  --p2-sponsor-color: #F1DA00;
+
+} */
+
+.p1 .losers_badge, .p2 .losers_badge {
+  background-color: #FF51D1;
+  color: #ffeb18;
+}
+
+.p1.player.container {
+  transform: translate(5em, 0px);
+  height: 180px;
+}
+.p2.player.container {
+  transform: translate(-5em, 0px);
+  height: 180px;
+}
+.p1.character {
+  transform: translate(8.5em, -50%);
+  width: 810px;
+  max-height: 680px;
+}
+.p2.character {
+  transform: translate(-8.5em, -50%);
+  width: 810px;
+  max-height: 680px;
+}
+
+.p1.character > .tsh_character, .p2.character > .tsh_character {
+  border-radius: 0;
+  top: -2px;
+}
+
+.p1.player.container > .character_name, .p2.player.container > .character_name {
+  border-radius: 0;
+}
+
+.versus {
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.versus > img {
+  width: 300px;
 }

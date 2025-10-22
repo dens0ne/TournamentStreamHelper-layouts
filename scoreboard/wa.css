@@ -1,0 +1,33 @@
+.p1.container {
+    transform: translate(-30px, -15px);
+}
+
+.p2.container {
+    transform: translate(30px, -15px);
+}
+
+.fgc.thin.gbvsr .player.container {
+    width: 500px;
+}
+
+.p1 .score {
+    background: #ff51d1;
+    color: white;
+    -webkit-text-stroke: 1px #000;
+}
+
+.p2 .score {
+    background: #ff51d1; 
+    color: white;
+    -webkit-text-stroke: 1px #000;
+}
+
+
+.fgc .name_twitter .name {
+    width: 100%;
+}
+
+.p1 .losers, .p2 .losers {
+    background: #ffeb18;
+    -webkit-text-stroke: 1px #000;
+}
