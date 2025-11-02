@@ -25,7 +25,8 @@
       "custom_center": [0.5, 0.8]
     },
     "fs": {
-      "asset_key": "icon"
+      "asset_key": "icons",
+      "custom_center": [0.6, 0.2]
     }
   }
 }
