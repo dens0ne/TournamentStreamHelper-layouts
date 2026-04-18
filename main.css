@@ -34,7 +34,6 @@
 }
 
 .tsh_character,
-.tsh_character > img,
 .tsh_character > div {
   position: relative;
   width: 100%;
