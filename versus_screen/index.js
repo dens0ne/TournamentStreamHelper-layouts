@@ -49,6 +49,10 @@ LoadEverything().then(() => {
           //     </span>
           //   `
           // );
+
+          // Custom code to trim sponsor name and player name if too long.
+          player.team = (player.team.length > 4) ? player.team.substring(0, 4) + '...' : player.team;
+          player.name = (player.name.length > 10) ? player.name.substring(0, 10) + '...' : player.name;
           SetInnerHtml(
             $(`.p${t + 1} .name`),
             `
