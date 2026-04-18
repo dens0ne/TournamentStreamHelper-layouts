@@ -75,6 +75,8 @@ LoadEverything().then(() => {
       }
 
       let isTeams = Object.keys(data.player_list.slot["1"].player).length > 1;
+      console.log('team??');
+      console.log(isTeams);
 
       for (const [t, team] of Object.entries(data.player_list.slot)) {
         if(!isTeams){
@@ -205,6 +207,7 @@ LoadEverything().then(() => {
           }
         } else {
           let hasTeamName = team.name != null && team.name != ""
+          console.log(hasTeamName);
 
           let names = [];
           for (const [p, player] of Object.values(team.player).entries()) {

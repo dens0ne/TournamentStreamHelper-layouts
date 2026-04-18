@@ -36,6 +36,19 @@ LoadEverything().then(() => {
       for (const [t, team] of teams.entries()) {
         const players = Object.values(team.player);
         for (const [p, player] of players.entries()) {
+          // SetInnerHtml(
+          //   $(`.p${t + 1} .name`),
+          //   `
+          //     <span>
+          //         <div>
+          //           <span class='sponsor'>
+          //               ${player.team ? player.team : ""}
+          //           </span>${player.team ? "/" : ""}
+          //           ${await Transcript(player.name)}
+          //         </div>
+          //     </span>
+          //   `
+          // );
           SetInnerHtml(
             $(`.p${t + 1} .name`),
             `
@@ -43,7 +56,7 @@ LoadEverything().then(() => {
                   <div>
                     <span class='sponsor'>
                         ${player.team ? player.team : ""}
-                    </span>${player.team ? "/" : ""}
+                    </span>${player.team ? "" : ""}
                     ${await Transcript(player.name)}
                   </div>
               </span>

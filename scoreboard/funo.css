@@ -1,12 +1,14 @@
 .p1.container {
     transform: translate(50px, -15px);
-    background: #000000c2;
+    /* background: #000000c2; */
+    background-color: #000000;
     clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
 }
 
 .p2.container {
     transform: translate(-50px, -15px);
-    background: #000000c2;
+    /* background: #000000c2; */
+    background-color: #000000;
     clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
 }
 

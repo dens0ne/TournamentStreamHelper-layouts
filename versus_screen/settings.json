@@ -27,6 +27,10 @@
     "fs": {
       "asset_key": "icons",
       "custom_center": [0.6, 0.2]
+    },
+    "riotpl": {
+      "asset_key": "full",
+      "custom_center": [0.6, 0.2]
     }
   }
 }

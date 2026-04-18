@@ -1,14 +1,14 @@
 {
   "top_1": {
     "default": {
-      "asset_key": "website",
+      "asset_key": "kangyaku",
       "use_dividers": true,
       "custom_center": [0.5, 0.4]
     }
   },
   "top_4": {
     "default": {
-      "asset_key": "full",
+      "asset_key": "kangyaku",
       "use_dividers": true,
       "custom_center": [0.5, 0.4],
       "custom_zoom": 1
@@ -16,7 +16,7 @@
   },
   "top_8": {
     "default": {
-      "asset_key": "full",
+      "asset_key": "kangyaku",
       "use_dividers": true,
       "custom_center": [0.5, 0.4],
       "custom_zoom": 1
